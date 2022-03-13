@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="utf-8">
+    <title> ارتباط با ما  </title>
+<style>
+#t1{
+    font-weight: bold;
+    background-color: white;
+    font-family: b titr;
+    width: 280px;
+    height: 50px;
+    font-size: 28px;
+	margin-right: 125px;
+	margin-bottom: 20px;
+}
+form div *{
+
+    vertical-align: middle;
+   
+}
+
+h1 {
+   
+    text-align: center;
+}
+label  {
+    
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    margin: 5px;
+   
+    
+}
+
+input {
+    height: 3em;
+    margin-top: 5px;
+}
+ textarea{
+    height: 10em;
+}
+
+input:not([type = "submit"]) , textarea {
+    width: 50%;
+}
+body{
+    text-align: center;
+    font-size: 25px;
+    font-family: b titr;
+    background-color: cyan;
+    font-weight: bold;
+}
+		#a{
+		border-radius:30px ;
+		text-align: center;
+		width: 1100px;
+		display: inline-block;
+		border-width: thick;
+		background-color: beige;
+	}
+
+body,td,th {
+    font-size: 20px;
+}
+	#name{
+		margin-right: 16px;
+	}
+	
+	#textt{
+		margin-top: 5px;
+	}
+</style>
+</head>
+<body>
+<div id="a">
+	
+    <form action = "contact_controller.php" method = "post">
+        <h1> تماس با ما </h1>
+        <div>&nbsp;
+          <input type = "text" name = "name" id = "name">
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;:نام &nbsp; &nbsp; &nbsp; &nbsp;</div>
+        <div>
+          <input type = "email" name = "email" id = "email">
+          <label for = "email">:آدرس ایمیل </label>
+        </div>
+        <div>
+          <textarea name = "textt" id = "textt"></textarea>
+          <label for = "textt2">:متن پیام </label>
+        </div>
+            <input type = "submit" value = "ارسال" id="t1">
+        </form>
+      </div>
+</body>
+</html>
