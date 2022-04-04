@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -85,18 +85,26 @@ input {
     <h1>ویرایش پروفایل</h1>
     <form action="edit_user_controller.php" method="post">
         <div>
-          <input type="text" name="fullname" id="fullname">
-          <label for="fullname">:نام کامل</label>
+          <input type="text" name="fullname" id="fullname" value = "<?php if(isset($row['fullname']) ) echo $row['fullname']; ?>">
+          <label for="fullname">:نام کامل</label >
       </div>
         <div>
-          <input type="text" name="username" id="username">
+          <input type="text" name="username" id="username" value = "<?php if(isset($row['username']) ) echo $row['username']; ?>">
           <label for="username2">:نام کاربری</label>
       </div>
         <div>
           <input type="password" name="password" id="password">
-          <label for="password2">کلمه عبور:</label>
+          <label for="password2">:کلمه عبور</label>
         </div>
-        <button type="submit" name="submit" id="t3">ثبت نام</button>
+        <div>
+            جنسیت: <br>
+            <input type="radio" name="gender" id="male" value="male" <?php if( isset($row['gender']) && $row['gender'] == 'male' ) echo 'checked';?>>
+            <label for="male">مرد</label>
+            <br>
+            <input type="radio" name="gender" id="female" value="female" <?php if( isset($row['gender']) && $row['gender'] == 'female' ) echo 'checked';?>>
+            <label for="female">زن</label>
+        </div>
+        <button type="submit" name="submit" id="t3">ویرایش پروفایل کاربر</button>
     </form>
 	</div>
 </body>
